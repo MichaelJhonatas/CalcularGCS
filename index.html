@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de GC's por Segmento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de GC's por Segmento</h1>
+        <form id="formulario">
+            <label for="data">Data:</label>
+            <input type="text" id="data" placeholder="AAAA-MM-DD" required><br><br>
+            
+            <label for="balcao">Valores Balcão (24 valores separados por espaço):</label>
+            <input type="text" id="balcao" required><br><br>
+            
+            <label for="drivethru">Valores Drive Thru (24 valores separados por espaço):</label>
+            <input type="text" id="drivethru" required><br><br>
+            
+            <label for="mc_entrega">Valores Mc Entrega (24 valores separados por espaço):</label>
+            <input type="text" id="mc_entrega" required><br><br>
+
+            <button type="submit">Registrar e Calcular</button>
+        </form>
+
+        <div id="resultado" style="display:none;">
+            <h2>Totais Calculados</h2>
+            <h3>Totais por Segmento</h3>
+            <table id="totais-segmentos">
+                <thead>
+                    <tr>
+                        <th>Segmento</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Totais por segmento serão inseridos aqui -->
+                </tbody>
+            </table>
+
+            <h3>Totais por Horário e Segmento</h3>
+            <table id="totais-horarios">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Balcão</th>
+                        <th>Drive Thru</th>
+                        <th>Mc Entrega</th>
+                        <th>Total Geral</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Totais por horário e segmento serão inseridos aqui -->
+                </tbody>
+            </table>
+
+            <!-- Botão para imprimir os resultados -->
+            <button onclick="imprimirResultado()">Imprimir Resultado</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
